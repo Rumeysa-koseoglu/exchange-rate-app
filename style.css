@@ -1,0 +1,19 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 35%;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    width: 600px;
+    height: auto;
+    padding: 20px;
+    border-radius: 5px;
+}
