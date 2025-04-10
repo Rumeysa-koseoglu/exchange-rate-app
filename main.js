@@ -12,6 +12,13 @@ function runEventListeners() {
 }
 
 function exchange() {
+
+ const inputValue = numberInput.value.trim();
+
+    if (!inputValue) {
+        resultInput.value = "";
+        return;
+    }
     const value = Number(numberInput.value.trim());
     const firstOptionValue = firstOption.options[firstOption.selectedIndex].textContent;
 
@@ -22,4 +29,7 @@ function exchange() {
     .then((result) => {
         resultInput.value = result.toFixed(3)
     })
+
+   
+    
 }
