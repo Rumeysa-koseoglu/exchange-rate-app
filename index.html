@@ -9,91 +9,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="container">
-        <div id="main">
-            <div class="header-wrapper">
-                <h4>EXCHANGE RATE CONVERTER</h4>
+    <div id="main">
+        
+       
+         <div class="conversion-section">
+        <div class="header-wrapper">
+            <h4>EXCHANGE RATE CONVERTER</h4>
+        </div>
+            <div class="currency-inputs">
+                <div class="currency-input" id="currency-number-input">
+                    <span id="symbol-first">USD</span>
+                    <input type="number" id="number" placeholder="0">
+                    <select id="firstCurrencyOption"></select>
+                </div>
+
+                <div class="currency-input">
+                    <span id="symbol-second">EUR</span>
+                    <input type="number" id="result" readonly placeholder="0">
+                    <select id="secondCurrencyOption"></select>
+                </div>
             </div>
-
-            <div class="content-wrapper">
-                <input type="number" id="number" placeholder="enter a number">
-                <select id="firstCurrencyOption">
-                    <option selected>USD</option>
-                    <option>EUR</option>
-                    <option>JPY</option>
-                    <option>BGN</option>
-                    <option>CZK</option>
-                    <option>DKK</option>
-                    <option>GBP</option>
-                    <option>HUF</option>
-                    <option>PLN</option>
-                    <option>RON</option>
-                    <option>SEK</option>
-                    <option>CHF</option>
-                    <option>ISK</option>
-                    <option>NOK</option>
-                    <option>HRK</option>
-                    <option>RUB</option>
-                    <option>TRY</option>
-                    <option>AUD</option>
-                    <option>BRL</option>
-                    <option>CAD</option>
-                    <option>CNY</option>
-                    <option>HKD</option>
-                    <option>IDR</option>
-                    <option>ILS</option>
-                    <option>INR</option>
-                    <option>KRW</option>
-                    <option>MXN</option>
-                    <option>MYR</option>
-                    <option>NZD</option>
-                    <option>PHP</option>
-                    <option>SGD</option>
-                    <option>THB</option>
-                    <option>ZAR</option>
-                </select>
-
-                <i class="fa-solid fa-arrow-right"></i>
-
-                <select id="secondCurrencyOption">
-                    <option>USD</option>
-                    <option selected>EUR</option>
-                    <option>JPY</option>
-                    <option>BGN</option>
-                    <option>CZK</option>
-                    <option>DKK</option>
-                    <option>GBP</option>
-                    <option>HUF</option>
-                    <option>PLN</option>
-                    <option>RON</option>
-                    <option>SEK</option>
-                    <option>CHF</option>
-                    <option>ISK</option>
-                    <option>NOK</option>
-                    <option>HRK</option>
-                    <option>RUB</option>
-                    <option>TRY</option>
-                    <option>AUD</option>
-                    <option>BRL</option>
-                    <option>CAD</option>
-                    <option>CNY</option>
-                    <option>HKD</option>
-                    <option>IDR</option>
-                    <option>ILS</option>
-                    <option>INR</option>
-                    <option>KRW</option>
-                    <option>MXN</option>
-                    <option>MYR</option>
-                    <option>NZD</option>
-                    <option>PHP</option>
-                    <option>SGD</option>
-                    <option>THB</option>
-                    <option>ZAR</option>
-                </select>
-
-                <input type="number" id="result" readonly placeholder="result">
+            <div class="numpad-container">
+                <div id="numpad" class="number-container"></div>
             </div>
         </div>
+
+
     </div>
     <script src="currency.js"></script>
     <script src="main.js"></script>
