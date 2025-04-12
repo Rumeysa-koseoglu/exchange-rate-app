@@ -1,77 +1,92 @@
 body {
-  background: linear-gradient(45deg, #000000, #38493b);
+  background-color: #c4e2e6;
 }
 
-#container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    transform: translateX(-50%);
-    left: 50%;
-    top: 25%;
-}
 
-#main {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #222222;
-    width: 600px;
-    height: 200px;
-    padding: 20px;
-    border-radius: 5px;
-    background-color: #222222;
-}
-
-.header-wrapper {
+.conversion-section{
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 0px 20px 20px 20px;
+  width: 400px;
+  margin: 100px auto;
 }
 
-.header-wrapper > h4 {
-  margin: 15px;
+.header-wrapper {
+  text-align: center;
+  width: 100%;
+  margin: 0px auto;
+  /* font-size: 14px; */
+}
+
+h4 {
   font-family: "Rubik", sans-serif;
   font-weight: 400;
-  font-size: 20px;
-  color: rgb(64, 145, 71);
-  /* margin-bottom: 40px; */
+  color: #b197fc;
 }
 
-.content-wrapper {
+.currency-inputs{
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  width: 100%;
+}
+
+.currency-input{
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin: 50px 0;
+  background-color: #f2f4f2;
+  border-radius: 15px;
+  padding: 0px 20px;
+  /* width: 100%; */
 }
 
-input {
-  padding: 5px;
-  border-radius: 5px;
-  border: 1px solid rgb(0, 0, 0);
-  margin: 0 10px;
-  background-color: rgb(126, 126, 126);
+#symbol-first,
+#symbol-second {
+  font-size: 22px;
   font-family: "Rubik", sans-serif;
-  border: linea;
+  color: #06771f;
 }
+
+
+ input {
+  padding: 15px 0px 15px 0px;
+  height: 30px;
+  font-size: 16px;
+  border-radius: 15px;
+  border: 1px solid #f2f4f2;
+  margin: 10px 20px;
+  background-color: #f2f4f2;
+  font-family: "Rubik", sans-serif;
+  font-size: 28.5px;
+  width: 70%;
+  /* border: 1px solid black; */
+} 
 
 ::placeholder {
-  color: rgb(26, 59, 42);
-  opacity: 1; /* Firefox */
+  color: #000000;
+  opacity: 1;
 }
 
-::-ms-input-placeholder { /* Edge 12 -18 */
-  color: rgb(26, 59, 42);
+::-ms-input-placeholder {
+  color: #000000;
 }
 
-select {
+#firstCurrencyOption,
+#secondCurrencyOption {
   padding: 5px;
-  margin: 0 10px;
-  background: linear-gradient(90deg, #063114, #148869);
+  /* margin: 0 10px; */
+  background-color: #f2f4f2;
+  color: #000000;
   border: none;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   font-family: "Rubik", sans-serif;
+  font-size: 16px;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -81,11 +96,101 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+input:focus {
+  outline: none;
+  border: transparent
+}
+
+
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
 }
 
-i {
-  color: rgba(95, 170, 104, 0.753);
+.number-container {
+  width: 393px;
+  height: 320px;
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr;
+  gap: 1.8em;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 30px;
+  font-family: "Rubik", sans-serif;
+
+}
+
+.numbers {
+  box-sizing: border-box;
+  text-align: center;
+  width: 90px;
+  height: 60px;
+  padding-top: 25px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+/* mobile responsiveness*/
+
+@media (max-width: 480px) {
+  
+.conversion-section{
+  padding: 0px 20px 20px 20px;
+  width: 300px;
+  margin:100px auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.currency-inputs{
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  width: 100%;
+}
+
+.currency-input{
+  border-radius: 15px;
+  padding: 0px 15px;
+  /* width: 100%; */
+}
+
+#symbol-first,
+#symbol-second {
+  font-size: 20px;
+}
+
+
+ input {
+  padding: 10px 0px 10px 0px;
+  height: 30px;
+  font-size: 16px;
+  border-radius: 15px;
+  margin: 10px 25px 10px 20;
+  font-size: 25px;
+  width: 70%;
+} 
+#firstCurrencyOption,
+#secondCurrencyOption {
+  font-size: 15px;
+}
+
+.number-container {
+  /* box-sizing: border-box; */
+  width: 340px;
+  height: 310px;
+  gap: 1em;
+  margin: 0 auto;
+  padding: 0 30px;
+  font-family: "Rubik", sans-serif;
+
+}
+
+.numbers {
+  width: 90px;
+  height: 60px;
+  padding-top: 25px;
+  font-size: 22px;
+}
 }
